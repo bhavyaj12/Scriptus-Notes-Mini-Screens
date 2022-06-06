@@ -1,0 +1,61 @@
+.note-container {
+  display: flex;
+  width: 20rem;
+  max-width: 30rem;
+  min-width: 10rem;
+  background-color: var(--cta-ultralight);
+  border-radius: 1.5rem;
+  height: auto;
+  position: relative;
+  text-align: center;
+}
+
+.note-label {
+  margin-left: auto;
+  background-color: var(--gray-txt);
+  color: var(--white-bg);
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.note-content {
+  font-size: 1.2rem;
+}
+
+.note-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.pin-icon {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+}
+
+.note-footer {
+  justify-content: space-between;
+}
+
+.note-icons {
+  gap: 1rem;
+}
+
+.note-1-color {
+  background-color: var(--note-1-color);
+}
+
+.note-2-color {
+  background-color: var(--note-2-color);
+}
+
+.note-3-color {
+  background-color: var(--note-3-color);
+}
+
+@media screen and (max-width: 500px) {
+  .note-container {
+    width: 12rem;
+  }
+};
+  
