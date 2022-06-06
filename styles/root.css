@@ -1,17 +1,22 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
 body {
-    display: flex;
-    flex-direction: column;
-    color: var(--font-color);
+  display: flex;
+  flex-direction: column;
+  color: var(--font-color);
 }
 
 :root {
-    --cta-notes: #fc9487;
-    --cta-light: #fdbcb4;
-    --cta-ultralight: #ffd8d4;
-    --cta-hover: #97493f;
-    --error-msg: #FF0000;
-    --notes-footer: #321815;
-    font-size: 70%;
+  --cta-notes: #fc9487;
+  --cta-light: #fdbcb4;
+  --cta-ultralight: #ffd8d4;
+  --cta-hover: #97493f;
+  --error-msg: #FF0000;
+  --notes-footer: #321815;
+  --note-1-color: #fdbeb7;
+  --note-2-color: #d0fdb7;
+  --note-3-color: #dbb7fd;
+  font-size: 70%;
 }
 
 .App,
@@ -28,6 +33,7 @@ body {
 
 .icons-display {
   color: var(--notes-footer);
+  font-size: 1.5rem;
 }
 
 .icons-display:hover {
@@ -39,14 +45,14 @@ body {
 button.btn-hover:hover {
   opacity: 0.7;
   cursor: pointer;
-  transform: translate(0,0);
+  transform: translate(0, 0);
 }
 
 ::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--cta-notes);
+  background-color: var(--cta-notes);
 }
