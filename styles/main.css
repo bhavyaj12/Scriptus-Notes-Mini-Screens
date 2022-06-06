@@ -2,4 +2,7 @@
 @import url(../styles/reset.css);
 @import url(../styles/root.css);
 @import url(../styles/nav-top.css);
+@import url(../styles/nav-side.css);
+@import url(../styles/add-note.css);
+@import url(../styles/note-card.css);
 @import url(../styles/footer.css);
