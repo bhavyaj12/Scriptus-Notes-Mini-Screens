@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML, CSS, Notes App, Google Keep" />
+    <meta name="description" content="A modern note taking application made using Halcyon Component Library." />
+    <meta name="author" content="Bhavya Joshi" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/home-page.css" />
+    <link rel="stylesheet" href="/styles/notes-page.css" />
+    <title>Add Notes | Scriptus Notes</title>
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+    <!-- Navigation Top -->
+    <div class="App">
+        <div class="page-container">
+            <header id="simple-nav-header">
+                <nav class="simple-nav-bar">
+                    <div class="nav-logo-box">
+                        <a href="/">
+                            <img src="/assets/scriptus-logo.svg" alt="logo" class="simple-nav-logo" />
+                        </a>
+                    </div>
+                    <div class="simple-nav">
+                        <ul class="simple-nav-links ul-no-decor display-flex">
+                            <li class="notes-nav-item">
+                                <a href="/" class="btn"> Home </a>
+                            </li>
+                            <li class="notes-nav-item">
+                                <a href="/pages/notes.html" class="btn"> Add Note </a>
+                            </li>
+                            <li class="notes-nav-item">
+                                <a href="/pages/login.html" class="btn"> Login </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+
+            <!-- Main Content -->
+            <main class="grid-col-2">
+                <div class="grid-col-item">
+                    <!-- Sidebar -->
+                    <nav class="navbar-side" id="aside">
+                        <div class="subheading-navside">
+                            <a href="/pages/notes.html" class="link-no-decor">
+                                <div class="flex-row p-5 m-5">
+                                    <i class="material-icons">
+                                        home
+                                    </i>
+                                    <span>Notes</span>
+                                </div>
+                            </a>
+                            <a href="/pages/archive.html" class="link-no-decor">
+                                <div class="flex-row p-5 m-5">
+                                    <i class="material-icons">
+                                        archive
+                                    </i>
+                                    <span>Archive</span>
+                                </div>
+                            </a>
+                            <a href="/pages/trash.html" class="link-no-decor">
+                                <div class="flex-row p-5 m-5">
+                                    <i class="material-icons">
+                                        delete
+                                    </i>
+                                    <span>Trash</span>
+                                </div>
+                            </a>
+                            <div class="flex-row p-5 m-5 label-nav">
+                                <i class="material-icons">
+                                    label
+                                </i>
+                                <span>Labels</span>
+                            </div>
+                            <div class="flex-col">
+                                <div class="label-nav-item m-1">
+                                    no-label
+                                </div>
+                                <div class="label-nav-item m-1">
+                                    study
+                                </div>
+                                <div class="label-nav-item m-1">
+                                    books
+                                </div>
+                                <div class="label-nav-item m-1">
+                                    movies
+                                </div>
+                                <div class="label-nav-item m-1">
+                                    work
+                                </div>
+                            </div>
+                            <div class="flex-row create-label-row">
+                                <input class="create-label" placeholder="create label..." />
+                                <button class="button btn-solid button-primary btn-hover">
+                                    <i class="fa fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="grid-col-item flex-col">
+                    <section class="notes-editor-container">
+                        <div class="filter-container flex-row">
+                            <h5 class="h5">Sort By:</h5>
+                            <div class="radio-container">
+                                <label for="latest-first">Latest First</label>
+                                <input type="radio" id="latest-first" name="notes-sort-date" class="mx-3"
+                                    value="new-to-old" />
+                            </div>
+                            <div class="radio-container">
+                                <label for="oldest-first">Oldest First</label>
+                                <input type="radio" id="oldest-first" name="notes-sort-date" class="mx-3 text-normal"
+                                    value="old-to-new" />
+                            </div>
+                            <p class="button button-link">Clear</p>
+                        </div>
+
+                        <!-- AddNote -->
+                        <form class="add-note-container flex-col mb-3 p-3">
+                            <span class="material-icons add-note-pin">
+                                push_pin
+                            </span>
+                            <input type="text" placeholder="Add title" class="add-note-title p-3" />
+                            <textarea class="add-note-content p-3" placeholder="Enter note..."></textarea>
+                            <div class="add-note-footer flex-row my-3">
+                                <button type="submit" class="button btn-solid button-primary btn-hover">
+                                    Save Note
+                                </button>
+                                <div class="flex-row add-note-footer">
+                                    <div class="flex-row add-note-icons">
+                                        <span class="material-icons">
+                                            color_lens
+                                        </span>
+                                        <label for="select-label">
+                                            <span class="material-icons">
+                                                label
+                                            </span>
+                                        </label>
+                                        <select id="select-label" class="select-label">
+                                            <option value="no-label">
+                                                no-label
+                                            </option>
+                                            <option value="study">
+                                                study
+                                            </option>
+                                            <option value="books">
+                                                books
+                                            </option>
+                                            <option value="movies">
+                                                movies
+                                            </option>
+                                            <option value="work">
+                                                work
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                        <h3 class="h3">Saved Notes appear here</h3> 
+                        <section class="notes-display">
+                            <!-- Note-1 -->
+                            <div class="note-container flex-col p-4 m-4 note-1-color">
+                                <span class="material-icons pin-icon icons-display">
+                                    push_pin
+                                </span>
+                                <p class="txt-small note-label my-2">work</p>
+                                <p class="note-title mb-3">Note-1</p>
+                                <p class="note-content">This is note-1.</p>
+                                <div class="flex-row note-footer mt-7">
+                                    <p class="text-sm">6/6/2022, 7:19:18 pm</p>
+                                    <div class="note-icons">   
+                                        <i class="material-icons icons-display">
+                                            edit
+                                        </i>
+                                        <i class="material-icons icons-display">
+                                            archive
+                                        </i>
+                                        <i class="material-icons icons-display">
+                                            delete
+                                        </i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Note-2 -->
+                            <div class="note-container flex-col p-4 m-4 note-2-color">
+                                <span class="material-icons pin-icon icons-display">
+                                    push_pin
+                                </span>
+                                <p class="txt-small note-label my-2">books</p>
+                                <p class="note-title mb-3">Note-2</p>
+                                <p class="note-content">This is note-2.</p>
+                                <div class="flex-row note-footer mt-7">
+                                    <p class="text-sm">6/6/2022, 7:19:18 pm</p>
+                                    <div class="note-icons">   
+                                        <i class="material-icons icons-display">
+                                            edit
+                                        </i>
+                                        <i class="material-icons icons-display">
+                                            archive
+                                        </i>
+                                        <i class="material-icons icons-display">
+                                            delete
+                                        </i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Note-3 -->
+                            <div class="note-container flex-col p-4 m-4 note-3-color">
+                                <span class="material-icons pin-icon icons-display">
+                                    push_pin
+                                </span>
+                                <p class="txt-small note-label my-2">movies</p>
+                                <p class="note-title mb-3">Note-3</p>
+                                <p class="note-content">This is note-3.</p>
+                                <div class="flex-row note-footer mt-7">
+                                    <p class="text-sm">6/6/2022, 7:19:18 pm</p>
+                                    <div class="note-icons">   
+                                        <i class="material-icons icons-display">
+                                            edit
+                                        </i>
+                                        <i class="material-icons icons-display">
+                                            archive
+                                        </i>
+                                        <i class="material-icons icons-display">
+                                            delete
+                                        </i>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
